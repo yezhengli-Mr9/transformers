@@ -458,6 +458,8 @@ def load_and_cache_examples(args, tokenizer, evaluate=False, output_examples=Fal
             return_dataset="pt",
             threads=args.threads,
         )
+        print("yezheng##########features", features.shape)
+        print("yezheng##########dataset", dataset.shape)
 
         if args.local_rank in [-1, 0]:
             logger.info("Saving features into cached file %s", cached_features_file)
